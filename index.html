@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bill Cauchois</title>
+    <script type="text/template" id="repo-template">
+      <h3 class="name">
+        <a href="{{html_url}}">{{name}}</a>
+      </h3>
+      <div class="language">{{language}}</div>
+      <div class="description">{{description}}</div>
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/mustache.js" type="text/javascript"></script>
+    <script src="/app.js" type="text/javascript"></script>
+    <script src="https://api.github.com/users/wcauchois/repos?callback=gotRepos" type="text/javascript"></script>
+    <link rel="stylesheet/less" type="text/css" href="/styles.less" />
+    <script src="/less-1.4.0-beta.js" type="text/javascript"></script>
+  </head>
 
+  <body>
+    <div id="container">
+      <h1 class="title">
+        <a href="https://twitter.com/wcauchois">@wcauchois</a>
+      </h1>
+      <div id="repos-container">
+      </div>
+    </div>
+  </body>
+</html>
