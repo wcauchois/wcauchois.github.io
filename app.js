@@ -6,7 +6,7 @@ var featured = [
 ];
 var repos = null;
 function gotRepos(response) {
-  repos = response.data;
+  repos = _.filter(response.data, function(r) { return !r.fork });
   repos.sort(function(repo1, repo2) {
     return new Date(repo2.pushed_at).getTime() -
       new Date(repo1.pushed_at).getTime();
