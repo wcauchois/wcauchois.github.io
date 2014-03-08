@@ -1,4 +1,6 @@
 @phoneWidth: 768px;
+@linkColor: #1E4488;
+@tileBgColor: rgb(202, 213, 228);
 body { font-family: sans-serif; }
 #container {
   .title {
@@ -11,6 +13,8 @@ body { font-family: sans-serif; }
   #repos-container {
     .repo {
       border: 1px solid #e6e6e6;
+      box-shadow: 1px 1px 2px #e2e2e2;
+      -webkit-transition: box-shadow .1s;
       float: left;
       width: 200px;
       height: 150px;
@@ -18,7 +22,8 @@ body { font-family: sans-serif; }
       padding: 5px;
       cursor: pointer;
       &:hover {
-        background-color: #e6e6e6;
+        background-color: @tileBgColor;
+        box-shadow: none;
       }
       .featured {
         float: right;
@@ -29,7 +34,7 @@ body { font-family: sans-serif; }
         margin-bottom: 2px;
         a {
           text-decoration: none;
-          color: #0776a0;
+          color: @linkColor;
         }
       }
       .language {
