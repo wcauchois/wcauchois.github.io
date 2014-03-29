@@ -4,28 +4,32 @@ var featured = [
   'spaceman',
   'headsheet'
 ];
-var repos = null;
-function gotRepos(response) {
-  repos = _.filter(response.data, function(r) { return !r.fork });
-  repos.sort(function(repo1, repo2) {
-    return new Date(repo2.pushed_at).getTime() -
-      new Date(repo1.pushed_at).getTime();
+var repoTemplate = $('#repo-template').text();
+
+$.ajax({
+  url: 'https://api.github.com/users/wcauchois/repos',
+  dataType: 'jsonp',
+  crossDomain: true,
+  jsonp: 'callback',
+  success: renderPage
+});
+
+function renderPage(apiResponse) {
+  var repos = _.chain(apiResponse.data)
+    .filter(function(r) { return !r.fork; })
+    .sort(function(r1, r2) {
+      return new Date(r2.pushed_at).getTime() -
+        new Date(r1.pushed_at).getTime();
+    })
+    .value();
+  var $repoList = $('#repo-list');
+  _.each(repos, function(repo) {
+    var options = _.extend({}, repo, {featured: featured.indexOf(repo.name) >= 0});
+    var $repoEl = $(Mustache.render(repoTemplate, options).trim());
+    $repoEl.click(function() {
+      location.href = repo.html_url;
+    });
+    $repoList.append($repoEl);
   });
 }
-$(document).ready(function() {
-  var repoTemplate = $('#repo-template').text();
-  var $reposContainer = $('#repos-container');
-  for (var i = 0; i < repos.length; i++) {
-    var repo = repos[i];
-    var $repoDiv = $('<div class="repo"></div>');
-    var options = $.extend({ }, repo, { featured: featured.indexOf(repo.name) >= 0 });
-    $repoDiv.html(Mustache.render(repoTemplate, options));
-    (function() {
-      var html_url = repo.html_url;
-      $repoDiv.click(function() {
-        location.href = html_url;
-      });
-    })();
-    $reposContainer.append($repoDiv);
-  }
-});
+

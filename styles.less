@@ -1,50 +1,58 @@
 @phoneWidth: 768px;
 @linkColor: #1E4488;
-@tileBgColor: rgb(202, 213, 228);
-body { font-family: sans-serif; }
-#container {
-  .title {
-    margin-left: 10px;
-    a {
-      text-decoration: none;
-      color: black;
-    }
-  }
-  #repos-container {
-    .repo {
-      border: 1px solid #e6e6e6;
-      box-shadow: 1px 1px 2px #e2e2e2;
-      -webkit-transition: box-shadow .1s;
-      float: left;
-      width: 200px;
-      height: 150px;
-      margin: 10px;
-      padding: 5px;
-      cursor: pointer;
-      &:hover {
-        background-color: @tileBgColor;
-        box-shadow: none;
-      }
-      .featured {
-        float: right;
-      }
-      h3.name {
-        margin: 0;
-        font-size: 1em;
-        margin-bottom: 2px;
-        a {
-          text-decoration: none;
-          color: @linkColor;
-        }
-      }
-      .language {
-        font-size: 12px;
-        color: #999;
-        margin-bottom: 2px;
-      }
-      .description {
-        font-size: 12px;
-      }
-    }
+@tileBgColor: #CAD5E4;
+@featuredColor: #EE3305;
+
+body {font-family: sans-serif;}
+
+.title {
+  margin-left: 10px;
+  a {
+    text-decoration: none;
+    color: black;
   }
 }
+
+.repo {
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  float: left;
+  height: 160px;
+  margin: 10px;
+  width: 210px;
+
+  &:hover {background-color: @tileBgColor;}
+
+  // http://apps.eky.hk/css-triangle-generator/
+  .featuredCorner {
+    border-color: transparent @featuredColor transparent transparent;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    float: right;
+    height: 0;
+    width: 0;
+  }
+
+  .content {
+    margin: 5px;
+
+    .name {
+      font-size: 1em;
+      margin: 0 0 2px 0;
+
+      a {
+        color: @linkColor;
+        text-decoration: none;
+      }
+    }
+
+    .language {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .description {font-size: 12px;}
+  }
+}
+
