@@ -13,6 +13,8 @@ body {font-family: sans-serif;}
   }
 }
 
+#repo-list {margin-right: 22px;}
+
 .repo {
   border: 1px solid #e6e6e6;
   cursor: pointer;
@@ -22,6 +24,8 @@ body {font-family: sans-serif;}
   width: 210px;
 
   &:hover {background-color: @tileBgColor;}
+
+  @media screen and (max-width: @phoneWidth) {width: 100%;}
 
   // http://apps.eky.hk/css-triangle-generator/
   .featuredCorner {
