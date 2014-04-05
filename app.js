@@ -24,7 +24,7 @@ function renderPage(apiResponse) {
     .value();
   var $repoList = $('#repo-list');
   _.each(repos, function(repo) {
-    var options = _.extend({}, repo, {featured: featured.indexOf(repo.name) >= 0});
+    var options = _.extend({featured: featured.indexOf(repo.name) >= 0}, repo);
     var $repoEl = $(Mustache.render(repoTemplate, options).trim());
     $repoEl.click(function() {
       location.href = repo.html_url;
