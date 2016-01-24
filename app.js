@@ -11,7 +11,8 @@ $.ajax({
   dataType: 'jsonp',
   crossDomain: true,
   jsonp: 'callback',
-  success: renderPage
+  success: renderPage,
+  data: {'per_page': 100}
 });
 
 function renderPage(apiResponse) {
