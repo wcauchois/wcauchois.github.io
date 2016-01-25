@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+}
+.container {
+  width: 600px;
+  margin: 20px auto 0 auto;
+  overflow: hidden;
+}
+.profile-container {
+  width: 200px;
+  float: left;
+}
+.profile-container .name {
+  font-size: 26px;
+  margin: 10px 0;
+}
+.profile-container .links {
+  margin-top: 10px;
+}
+.profile-container .links ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.profile-container .links ul li {
+  padding-bottom: 3px;
+}
+input[type=text] {
+  padding: 5px 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type=text]:hover {
+  border-color: #999;
+}
+input[type=text]:focus {
+  border-color: #66afe9;
+  border-size: 2px;
+  outline: 0;
+}
+.repos-container {
+  width: 380px;
+  float: right;
+  margin-left: 20px;
+}
+.repos-container .repo-search {
+  padding: 5px 0;
+}
+.repos-container .repo-search #search-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.repos-container .repo-list {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.repos-container .repo-list ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.repos-container .repo-list .repo-item {
+  padding: 5px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.repos-container .repo-list .repo-item.highlight {
+  background-color: #e6e6e6;
+}
+.repos-container .repo-list .repo-item:last-child {
+  border-bottom: none;
+}
+.repos-container .repo-list .repo-item .repo-name {
+  font-weight: bold;
+}
+.repos-container .repo-list .repo-item .repo-language {
+  color: #999;
+  font-size: 12px;
+}
+.repos-container .repo-list .repo-item .repo-description {
+  font-size: 12px;
+}
+.hidden {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: #337ab7;
+}
+a:hover {
+  text-decoration: underline;
+  color: #23527c;
+}
+.icon {
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.icon.twitter {
+  background-image: url(/img/icons/twitter.png);
+}
+.icon.lastfm {
+  background-image: url(/img/icons/lastfm.png);
+}
+.icon.github {
+  background-image: url(/img/icons/github.png);
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .profile-container,
+  .repos-container {
+    width: 100%;
+    float: none;
+  }
+  .profile {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .profile-container {
+    margin-bottom: 10px;
+  }
+  .repos-container {
+    margin-left: 0;
+  }
+  .repos-container .repo-list {
+    max-height: none;
+  }
+}

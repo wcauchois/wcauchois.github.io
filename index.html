@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bill Cauchois</title>
+    <meta name="description" content="Homepage for Bill Cauchois">
+    <meta name="keywords" content="bill,cauchois,bill cauchois">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="vendor/zepto.min.js"></script>
+    <script type="text/javascript" src="vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="vendor/mousetrap.min.js"></script>
+    <script type="text/template" id="repo-template">
+<li class="repo-item" data-reponame="<%= name %>">
+  <div class="repo-name">
+    <a href="<%= html_url %>" class="repo-link">
+      <%= name %>
+    </a>
+  </div>
+  <div class="repo-language">
+    <%= language %>
+  </div>
+  <div class="repo-description">
+    <%= description %>
+  </div>
+</li>
+    </script>
+    <link rel="stylesheet" href="build/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-container">
+        <div class="profile">
+          <img class="photo" src="img/me.png" width="200" height="200">
+          <h1 class="name">Bill Cauchois</h1>
+          <div class="bio">
+            software eng <a href="https://twitter.com/foursquare">@foursquare</a>
+          </div>
+          <div class="links">
+            <ul>
+              <li>
+                <span class="icon twitter"></span> <a href="https://twitter.com/wcauchois">Twitter</a>
+              </li>
+              <li>
+                <span class="icon lastfm"></span> <a href="http://www.last.fm/user/misterphyrephox">Last.fm</a>
+              </li>
+              <li>
+                <span class="icon github"></span> <a href="https://github.com/wcauchois">GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="repos-container">
+        <div class="repo-search">
+          <input type="text" placeholder="Search repositories" id="search-input">
+        </div>
+        <div class="repo-list">
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

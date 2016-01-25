@@ -1,0 +1,24 @@
+{
+  "name": "wcauchois-github-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcauchois/wcauchois.github.io.git"
+  },
+  "author": "Bill Cauchois <wcauchois@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wcauchois/wcauchois.github.io/issues"
+  },
+  "homepage": "https://github.com/wcauchois/wcauchois.github.io#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-less": "^3.0.5"
+  }
+}
