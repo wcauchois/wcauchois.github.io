@@ -129,5 +129,9 @@ a:hover {
   }
   .repos-container .repo-list {
     max-height: none;
+    overflow-y: visible;
+  }
+  .repos-container ul {
+    width: 100%;
   }
 }
