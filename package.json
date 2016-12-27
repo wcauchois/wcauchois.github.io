@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles": "lessc styles.less build/styles.css"
+    "styles": "lessc styles.less build/styles.css",
+    "html": "./build_html.sh"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/wcauchois/wcauchois.github.io#readme",
   "dependencies": {},
   "devDependencies": {
-    "less": "^2.7.1"
+    "less": "^2.7.1",
+    "mustache": "^2.3.0"
   }
 }
