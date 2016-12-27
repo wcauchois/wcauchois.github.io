@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "lessc styles.less build/styles.css"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,8 @@
     "url": "https://github.com/wcauchois/wcauchois.github.io/issues"
   },
   "homepage": "https://github.com/wcauchois/wcauchois.github.io#readme",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0",
-    "gulp-less": "^3.3.0"
+  "dependencies": {},
+  "devDependencies": {
+    "less": "^2.7.1"
   }
 }
