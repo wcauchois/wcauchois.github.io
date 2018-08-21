@@ -1,0 +1,3 @@
+[submodule "timepal"]
+	path = timepal
+	url = git@github.com:wcauchois/timepal.git
