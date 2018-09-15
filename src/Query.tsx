@@ -55,11 +55,11 @@ export class Query extends Component<QueryProps, QueryState> {
   render(props: RenderableProps<QueryProps>, state: QueryState) {
     const renderFn = (props.children! as RenderFn[])[0];
     if (state.type === 'loading') {
-      return renderFn(true, undefined, undefined);
+      return renderFn(true);
     } else if (state.type === 'loaded') {
       return renderFn(false, undefined, state.data);
     } else if (state.type === 'error') {
-      return renderFn(false, state.error, undefined);
+      return renderFn(false, state.error);
     } else {
       throw new Error(`Illegal state`);
     }
