@@ -3,4 +3,4 @@
 	url = https://github.com/wcauchois/timepal.git
 [submodule "program-builder"]
 	path = program-builder
-	url = git@github.com:wcauchois/program-builder.git
+	url = https://github.com/wcauchois/program-builder.git
